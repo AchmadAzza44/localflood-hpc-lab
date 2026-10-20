@@ -4,16 +4,6 @@ Sistem analisis dan simulasi risiko banjir berbasis data (Streamlit). Materi kul
 
 > **Batasan penting:** alat pembelajaran dan simulasi **demonstratif**. Bukan sistem peringatan dini resmi, bukan model hidrologi terverifikasi. Hasil simulasi bukan prediksi kejadian banjir; dataset contoh adalah data SINTETIS.
 
-## Fitur (dipetakan ke PRD)
-| PRD | Fitur | Lokasi |
-|---|---|---|
-| FR-01 Import dan validasi | CSV/XLSX; alias kolom; baris tidak valid **ditandai dengan alasan**, bukan dibuang diam-diam; cek koordinat, tanggal, curah hujan, satuan | `localflood/schema.py` |
-| FR-02 Analisis historis | jumlah kejadian, distribusi waktu, ringkasan curah hujan | `localflood/historical.py` |
-| FR-03 Peta | titik pada koordinat valid saja (Folium, PyDeck cadangan; GeoPandas opsional) | `localflood/geo.py` |
-| FR-04 Simulasi skenario | model demonstratif reservoir limpasan + ensemble Monte Carlo berseed; output berlabel "hasil model" | `localflood/simulation.py` |
-| FR-05 Serial vs paralel | mode serial, paralel (process/thread), atau keduanya; konsistensi hasil diperiksa; peringatan overhead | `compare_modes` |
-| FR-06 Workflow | tiap pekerjaan: dataset + SHA-256, parameter, metode, waktu mulai/selesai, status, hasil, galat | `localflood/workflow.py` |
-| FR-07 Ekspor | CSV hasil, JSON parameter, laporan PDF | `localflood/reporting.py` |
 
 ## Struktur folder
 ```text
