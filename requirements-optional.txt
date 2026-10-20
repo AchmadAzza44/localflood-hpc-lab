@@ -1,0 +1,4 @@
+# Optional: only needed for advanced spatial analysis in LocalFlood.
+# The app detects their absence and falls back to Folium/PyDeck + haversine.
+geopandas>=0.14
+shapely>=2.0
